@@ -1,0 +1,26 @@
+{
+  "name": "whatsappweb_translator_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://PixelQuasar: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@github.com/PixelQuasar/whatsappweb_translator_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PixelQuasar/whatsappweb_translator_bot/issues"
+  },
+  "homepage": "https://github.com/PixelQuasar/whatsappweb_translator_bot#readme",
+  "dependencies": {
+    "bing-translate-api": "^2.8.0",
+    "nodemon": "^2.0.20",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.19.4"
+  }
+}
