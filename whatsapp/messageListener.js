@@ -4,7 +4,7 @@ const config = require("../config.json")
 
 function messageListener(message) {
     const content = message.body // raw message text
-    if (content.includes("#")){
+    if (content.includes(config.prefix)){
         //init translation funcs
         const text = prepare(content) // pure message without transpation tags
         for (const tag in config.langtags) { // run translate for every possible tag in message

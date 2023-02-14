@@ -1,7 +1,8 @@
 {
+    "prefix": "&",
     "langtags": {
-        "#e": "en",
-        "#r": "ru",
-        "#t": "tr"
+        "&e": "en",
+        "&r": "ru",
+        "&t": "tr"
     }
 }
