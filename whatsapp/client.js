@@ -15,7 +15,6 @@ client.on('ready', () => {
 
 // on new text message
 client.on('message', (message) => {
-    console.log("message received")
 	messageListener(message)
 })
  
