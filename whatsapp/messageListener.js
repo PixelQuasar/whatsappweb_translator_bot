@@ -1,21 +1,16 @@
 const prepare = require("./prepareToTranslate")
 const transateAndReply = require("../translator/translateAndReply")
+const config = require("../config.json")
 
 function messageListener(message) {
-    const content = message.body
-    console.log(content)
+    const content = message.body // raw message text
     if (content.includes("#")){
-        const text = prepare(content)
-        if (content.includes("#e")) {
-            console.log("stage 1")
-            transateAndReply("en", text, message.reply)
-            //console.log(translatedText)
-        }
-        if (content.includes("#r")) {
-            const translatedText = transateAndReply("ru", text, message.reply)
-        }
-        if (content.includes("#t")) {
-            const translatedText = transateAndReply("tr", text, message.reply)
+        //init translation funcs
+        const text = prepare(content) // pure message without transpation tags
+        for (const tag in config.langtags) { // run translate for every possible tag in message
+            if (content.includes(tag)) {
+                transateAndReply(config.langtags[tag], text, message) // eng translate
+            }
         }
     }
 }
