@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer')
-const config = require("../config.json")
+const mail = require("../mail.json")
 
 const transporter = nodemailer.createTransport({
-    host: config.host,
+    host: mail.host,
     port: 25,
     auth: {
-        user: config.mail.user,
-        pass: config.mail.password
+        user: mail.user,
+        pass: mail.password
     }
 })
 

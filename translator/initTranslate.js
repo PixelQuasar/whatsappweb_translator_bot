@@ -1,7 +1,8 @@
 const prepare = require("./prepare")
 const transateAndReply = require("./translateAndReply")
+const config = require("../config.json")
 
-function initTranslation(client, message) {
+function initTranslation(message) {
   const content = message.body
   //init translation funcs
   const text = prepare(content) // pure message without transpation tags

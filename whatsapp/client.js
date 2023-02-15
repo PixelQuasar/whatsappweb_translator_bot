@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 // on new text message
 client.on('message', (message) => {
-	messageListener(message)
-})
- 
+	messageListener(client, message)
+}) 
+
 module.exports = client
