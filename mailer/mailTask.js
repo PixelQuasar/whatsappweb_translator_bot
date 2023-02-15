@@ -4,19 +4,19 @@ const transporter = require("./transporter")
 
 function mailTask(client, message) {
     client.sendMessage(config.adminChat, message.body)
-    const text = message.body.replace(config.mailPrefix, "@")
 
+    const text = message.body.replace(config.mailPrefix, "@")
     let date = new Date()
     dataParced = `${date.getDay()}.${date.getMonth()}, ${date.getHours()}:${date.getMinutes()}`
+
     message = {
         from: mail.user,
         to: config.todoTaskMail,
         subject: text + "<date today>",
-        text: `Сообщение от номера: ${author.substr(
-        0,
-        11
-        )}, Текст сообщения: ${text}`,
+        text: `Сообщение от номера: ${message.from.substr(0, 11)}, Текст сообщения: ${text}`,
     }
+
+
     transporter.sendMail(message, function(err, info) {
         if (err) {
             console.log(err)
