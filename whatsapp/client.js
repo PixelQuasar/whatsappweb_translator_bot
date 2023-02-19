@@ -1,7 +1,14 @@
 const whatsapp = require('whatsapp-web.js')
-const client = new whatsapp.Client()
 const qrcode = require("qrcode-terminal")
 const messageListener = require("./messageListener.js")
+
+const client = new whatsapp.Client( { 
+    puppeteer: { 
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }, 
+    session: sessionCfg 
+})
 
 // on QR receiving
 client.on('qr', (qr) => {
