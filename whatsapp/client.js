@@ -6,8 +6,7 @@ const client = new whatsapp.Client( {
     puppeteer: { 
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
-    }, 
-    session: sessionCfg 
+    }
 })
 
 // on QR receiving
