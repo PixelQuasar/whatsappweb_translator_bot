@@ -9,15 +9,14 @@ function mailTask(client, message) {
     let date = new Date()
     dataParced = `${date.getDay()}.${date.getMonth()}, ${date.getHours()}:${date.getMinutes()}`
 
-    message = {
+    emailTodoMessage = {
         from: mail.user,
-        to: config.todoTaskMail,
+        to: `${config.todoTaskMail}, ${config.bitrixMail}`,
         subject: text + "<date today>",
         text: `Сообщение от номера: ${message.from.substr(0, 11)}, Текст сообщения: ${text}`,
     }
 
-
-    transporter.sendMail(message, function(err, info) {
+    transporter.sendMail(emailTodoMessage, function(err, info) {
         if (err) {
             console.log(err)
         } else {
