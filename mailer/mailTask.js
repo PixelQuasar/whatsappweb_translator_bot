@@ -11,7 +11,7 @@ function mailTask(client, message) {
 
     emailTodoMessage = {
         from: mail.user,
-        to: `${config.todoTaskMail}, ${config.bitrixMail}`,
+        to: config.bitrixMail,
         subject: text + "<date today>",
         text: `Сообщение от номера: ${message.from.substr(0, 11)}, Текст сообщения: ${text}`,
     }
