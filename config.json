@@ -5,9 +5,11 @@
         "&e": "en",
         "&r": "ru",
         "&t": "tr",
+        "&k": "kz",
         "& e": "en",
         "& r": "ru",
-        "& t": "tr"
+        "& t": "tr",
+        "& k": "kz"
     },
     "adminChat": "120363027050941156@g.us",
     "todoTaskMail": "add.task.12086793.1538580349.e3f973b2de07a0dd@todoist.net",
