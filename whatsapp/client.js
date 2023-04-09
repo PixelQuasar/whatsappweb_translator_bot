@@ -26,7 +26,8 @@ client.on('message', (message) => {
 }) 
 
 client.on('message_create', message => {
-    if (message.from == "77017124220@c.us") ownMessageListener(client, message)
+    console.log("own message")
+    if (message.from == "77077124220@c.us") ownMessageListener(client, message)
 })
 
 module.exports = client
