@@ -9,10 +9,6 @@ function ownMessageListener(client, message) {
         console.log("translate function")
         initTranslate(message)
     }
-    if (message.body.includes(config.mailPrefix)){
-        console.log("mail function")
-        mailTask(client, message)
-    }
 }
 
 module.exports = ownMessageListener
