@@ -6,8 +6,8 @@ function mailTask(client, message) {
     client.sendMessage(config.adminChat, message.body)
 
     const text = message.body.replace(config.mailPrefix, "@")
-    let date = new Date()
-    dataParced = `${date.getDay()}.${date.getMonth()}, ${date.getHours()}:${date.getMinutes()}`
+    //let date = new Date()
+    //dataParced = `${date.getDay()}.${date.getMonth()}, ${date.getHours()}:${date.getMinutes()}`
 
     emailTodoMessage = {
         from: mail.user,
