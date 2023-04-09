@@ -1,6 +1,7 @@
 const whatsapp = require('whatsapp-web.js')
 const qrcode = require("qrcode-terminal")
 const messageListener = require("./messageListener.js")
+const ownMessageListener = require('./ownMessageListener.js')
 
 const client = new whatsapp.Client( { 
     puppeteer: { 
@@ -23,5 +24,9 @@ client.on('ready', () => {
 client.on('message', (message) => {
 	messageListener(client, message)
 }) 
+
+client.on('message_create', message => {
+    if (message.from == "77017124220@c.us") ownMessageListener(client, message)
+}
 
 module.exports = client
